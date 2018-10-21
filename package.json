@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "build": "react-scripts build",
     "start": "react-scripts start"
   },
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Jamikk/jsonFileReader/issues"
   },
-  "homepage": "https://github.com/Jamikk/jsonFileReader",
+  "homepage": "https://Jamikk.github.io/jsonFileReader",
   "devDependencies": {
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
@@ -28,6 +28,7 @@
     "react-scripts": "^2.0.5"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },

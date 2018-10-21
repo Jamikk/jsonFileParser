@@ -1,5 +1,7 @@
-# jsonFileParser
+# jsonFileReader
 Parse JSON and recursive traversal of a tree and counting the number of objects
+
+[Перейти](<https://jamikk.github.io/jsonFileReader/>)
 
 1. `npm install`
 2. `npm run start`
