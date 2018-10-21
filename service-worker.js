@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/Jamikk/jsonFileReader/precache-manifest.f42c3ad7ee0897af7142be955f19f189.js"
+  "/jsonFileReader/precache-manifest.64998936fa38801d6adf096f1215b63d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Jamikk/jsonFileReader/index.html", {
+workbox.routing.registerNavigationRoute("/jsonFileReader/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
