@@ -75,7 +75,7 @@ export default class App extends React.Component {
         }
 
         const jsonType = /\/json$/i;
-        const LIMIT_SIZE = 1024; // 1Mb
+        const LIMIT_SIZE = 1000000; // ~1Mb
 
         Array.from(files).forEach(file => {
 
