@@ -40,6 +40,13 @@ export default class App extends React.Component {
 
     };
 
+    setErrorState = errorMessage => {
+        this.setState({
+            errorMessage,
+            error: true
+        });
+    }
+
     onReaderLoad = ({ target }) => {
         // Я не уверен как правильнее проверить что данные закодированны в base64
         const jsonType = /\/json;base64/i;
@@ -54,12 +61,7 @@ export default class App extends React.Component {
                 obj = JSON.parse(decodeData);
             }
         } catch (err) {
-            console.log(err);
-            // TODO Вынести бы это в метод validateFile
-            this.setState({
-                errorMessage: 'JSON файл не валидный!',
-                error: true
-            });
+            this.setErrorState('JSON файл не валидный!');
             return;
         }
 
@@ -80,20 +82,12 @@ export default class App extends React.Component {
         Array.from(files).forEach(file => {
 
             if (file.size > LIMIT_SIZE) {
-                // TODO Вынести бы это в метод validateFile
-                this.setState({
-                    errorMessage: 'Размер файла слишком велик!',
-                    error: true
-                });
+                this.setErrorState('Размер файла слишком велик!');
                 return;
             }
 
             if (!jsonType.test(file.type)) {
-                // TODO Вынести бы это в метод validateFile
-                this.setState({
-                    errorMessage: 'Недоспустимый формат файла',
-                    error: true
-                });
+                this.setErrorState('Недоспустимый формат файла');
                 return;
             }
 
